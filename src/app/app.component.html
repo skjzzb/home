@@ -1,21 +1,138 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<body>
+  <div class="page-wrapper">
+     
+      <!-- Preloader -->
+      <div class="preloader"></div>
+     
+      <app-header></app-header>
+      
+      <router-outlet></router-outlet>
+      
+      <!--Main Footer-->
+      <footer class="main-footer">
+      <div class="auto-container">
+            <!--Widgets Section-->
+              <div class="widgets-section">
+                <div class="row clearfix">
+                    
+                      <!--big column-->
+                      <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                          <div class="row clearfix">
+                          
+                              <!--Footer Column-->
+                              <div class="footer-column col-md-7 col-sm-6 col-xs-12">
+                                  <div class="footer-widget logo-widget">
+                    <div class="logo">
+                                        <a href="index.html"><img src="assets/images/footer-logo.png" alt="" /></a>
+                                      </div>
+                                      <div class="text">Floor & Decor is a leading specialty retailer in the hard surface flooring market, offering the broadest in-stock selection</div>
+                                  </div>
+                              </div>
+                              
+                              <!--Footer Column-->
+                              <div class="footer-column col-md-5 col-sm-6 col-xs-12">
+                                  <div class="footer-widget links-widget">
+                                    <h2>Information</h2>
+                                      <div class="widget-content">
+                      <ul class="list">
+                                            <li><a href="#">About us</a></li>
+                                              <li><a href="#">Customer</a></li>
+                                              <li><a href="#">Service</a></li>
+                                              <li><a href="#">Collection</a></li>
+                                              <li><a href="#">Blog</a></li>
+                                              <li><a href="#">BestSellers</a></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+              </div>
+                      </div>
+                      
+                      <!--big column-->
+                      <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                          <div class="row clearfix">
+                            
+                              <!--Footer Column-->
+                              <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                  <div class="footer-widget links-widget">
+                                    <h2>Quick Links</h2>
+                                      <div class="widget-content">
+                      <ul class="list">
+                                            <li><a href="#">Privacy Policy</a></li>
+                                              <li><a href="#">Terms & Condition</a></li>
+                                              <li><a href="#">Support</a></li>
+                                              <li><a href="#">Contact Us</a></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <!--Footer Column-->
+                              <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                  <div class="footer-widget info-widget">
+                                    <div class="widget-content">
+                                          <div class="text">
+                                              <p>5604 Willow Crossing Ct, <br> Clifton, VA, 20124</p>
+                                              <p>Call Now for Services! <br><span class="theme_color">966 357 2211</span></p>
+                                          </div>
+                                          <ul class="social-icon-one">
+                                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                              <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                                              <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                                              <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                          </div>
+                      </div>
+                      
+          </div>
+              </div>
+              
+          </div>
+          <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="text">&copy; 2017 <span class="theme_color">DryCo Inc.</span> All Rights Reserved to It’s Owner</div>
+              </div>
+          </div>
+      </footer>
+      
+      
+  </div>
+  <!--End pagewrapper-->
+  
+  <!--Scroll to top-->
+  <div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-double-up"></span></div>
+  
+  <!-- Color Palate / Color Switcher -->
+  <div class="color-palate">
+      <div class="color-trigger">
+          <i class="fa fa-gear"></i>
+      </div>
+      <div class="color-palate-head">
+          <h6>Choose Your Color</h6>
+      </div>
+      <div class="various-color clearfix">
+          <div class="colors-list">
+              <span class="palate default-color active" data-theme-file="css/color-themes/default-theme.css"></span>
+              <span class="palate teal-color" data-theme-file="css/color-themes/teal-theme.css"></span>
+              <span class="palate green-color" data-theme-file="css/color-themes/green-theme.css"></span>
+              <span class="palate pink-color" data-theme-file="css/color-themes/pink-theme.css"></span>
+              <span class="palate blue-color" data-theme-file="css/color-themes/blue-theme.css"></span>
+              <span class="palate orange-color" data-theme-file="css/color-themes/orange-theme.css"></span>
+              <span class="palate olive-color" data-theme-file="css/color-themes/olive-theme.css"></span>
+              <span class="palate lime-color" data-theme-file="css/color-themes/lime-theme.css"></span>
+          </div>
+      </div>
+  
+      <div class="palate-foo">
+          <span>You can easily change and switch the colors.</span>
+      </div>
+  
+  </div>
 
-<router-outlet></router-outlet>
+
+

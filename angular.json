@@ -23,9 +23,40 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.css",
+              "src/assets/plugins/revolution/css/settings.css",
+              "src/assets/plugins/revolution/css/layers.css",
+              "src/assets/plugins/revolution/css/navigation.css",
+              "src/assets/css/style.css",
+              "src/assets/css/responsive.css",
+              "src/assets/css/color-switcher-design.css",
+              "src/assets/css/color-themes/default-theme.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/js/jquery.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/plugins/revolution/js/jquery.themepunch.revolution.min.js",
+              "src/assets/plugins/revolution/js/jquery.themepunch.tools.min.js",
+              "src/assets/plugins/revolution/js/extensions/revolution.extension.actions.min.js",
+              "src/assets/plugins/revolution/js/extensions/revolution.extension.carousel.min.js",
+              "src/assets/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js",
+              "src/assets/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js",
+              "src/assets/plugins/revolution/js/extensions/revolution.extension.migration.min.js",
+              "src/assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js",
+              "src/assets/plugins/revolution/js/extensions/revolution.extension.parallax.min.js",
+              "src/assets/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js",
+              "src/assets/plugins/revolution/js/extensions/revolution.extension.video.min.js",
+              "src/assets/js/main-slider-script.js",
+              "src/assets/js/jquery.fancybox.pack.js",
+              "src/assets/js/jquery.fancybox-media.js",
+              "src/assets/js/owl.js",
+              "src/assets/js/appear.js",
+              "src/assets/js/wow.js",
+              "src/assets/js/script.js",
+              "src/assets/js/map-script.js",
+              "src/assets/js/color-settings.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
