@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 require("../../../assets/js/main-slider-script.js")
 require("../../../assets/js/map-script.js")
+require("../../../assets/js/auth.js")
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
     //console.log('hi')
     loadSlider()
     MapLoadScript()
+    createModal()
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
     //require("../../../assets/js/main-slider-script.js")

@@ -55,7 +55,8 @@
               "src/assets/js/wow.js",
               "src/assets/js/script.js",
               "src/assets/js/map-script.js",
-              "src/assets/js/color-settings.js"
+              "src/assets/js/color-settings.js",
+              "src/assets/js/auth.js"
             ],
             "es5BrowserSupport": true
           },
