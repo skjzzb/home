@@ -4,4 +4,5 @@ export interface Customer{
     phone: string;
     avatarUrl: string;
     rates: number;
+    emailVerified: boolean
 }
