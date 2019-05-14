@@ -35,7 +35,7 @@ export class AuthService {
       this.ngZone.run(() => {
         this.router.navigate(['profile'])
       })
-      //this.setUserData(result.user);
+      this.updateUserData(result.user);
     }).catch((err) => {
       this.loginError = err
     })
@@ -70,12 +70,20 @@ export class AuthService {
     return this.authLogin(new auth.GoogleAuthProvider());
   }
 
+  FacebookAuth(){
+    return this.authLogin(new auth.FacebookAuthProvider());
+  }
+
+  TwitterAuth(){
+    return this.authLogin(new auth.TwitterAuthProvider());
+  }
+
   authLogin(provider){
     return this.afAuth.auth.signInWithPopup(provider).then((result) => {
       this.ngZone.run(() => {
         this.router.navigate(['profile'])
       })
-      //this.setUserData(result.user)
+      this.updateUserData(result.user)
     }).catch((err) => {
       window.alert(err)
     })
@@ -92,6 +100,17 @@ export class AuthService {
       emailVerified: user.emailVerified
     }
     return userRef.set(customerData)
+  }
+
+  updateUserData(user){
+    const userRef:AngularFireObject<Customer> = this.firebase.object<Customer>('RidersInformation/'+user.uid);
+    const customerData = {
+      email: user.email,
+      name: user.displayName,
+      avatarUrl: user.photoURL,
+      emailVerified: user.emailVerified
+    }
+    return userRef.update(customerData)
   }
 
   signout(){
