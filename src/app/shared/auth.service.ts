@@ -14,6 +14,8 @@ export class AuthService {
   customerData: any;
   currentCustomer: Observable<Customer>;
   customer:Customer;
+  public loginError: string;
+  public signupError: string;
 
   constructor(private afAuth: AngularFireAuth, public ngZone:NgZone, public router:Router, private firebase: AngularFireDatabase) {
     this.afAuth.authState.subscribe(user => {
@@ -31,20 +33,22 @@ export class AuthService {
   signin(email,password){
     return this.afAuth.auth.signInWithEmailAndPassword(email, password).then((result) => {
       this.ngZone.run(() => {
-        this.router.navigate(['home'])
+        this.router.navigate(['profile'])
       })
-      this.setUserData(result.user);
+      //this.setUserData(result.user);
     }).catch((err) => {
-      window.alert(err.message);
+      this.loginError = err
     })
   }
 
-  signup(email,password){
+  signup(email,password,phone){
     return this.afAuth.auth.createUserWithEmailAndPassword(email,password).then((result) => {
       this.sendVerificationMail();
-      this.setUserData(result.user)
+      this.setUserData(result.user,phone)
     }).catch((err) => {
-      window.alert(err.message)
+      this.signupError = err
+      console.log(err)
+      //window.alert(err.message)
     })
   }
 
@@ -69,21 +73,21 @@ export class AuthService {
   authLogin(provider){
     return this.afAuth.auth.signInWithPopup(provider).then((result) => {
       this.ngZone.run(() => {
-        this.router.navigate(['home'])
+        this.router.navigate(['profile'])
       })
-      this.setUserData(result.user)
+      //this.setUserData(result.user)
     }).catch((err) => {
       window.alert(err)
     })
   }
 
-  setUserData(user){
+  setUserData(user, phone){
     const userRef:AngularFireObject<Customer> = this.firebase.object<Customer>('RidersInformation/'+user.uid);
     const customerData: Customer = {
       email: user.email,
       name: user.displayName,
       avatarUrl: user.photoURL,
-      phone: "",
+      phone: phone,
       rates: 0,
       emailVerified: user.emailVerified
     }
@@ -92,6 +96,7 @@ export class AuthService {
 
   signout(){
     return this.afAuth.auth.signOut().then(() => {
+      this.customerData = null
       localStorage.removeItem('user');
       this.router.navigate(['home'])
     })

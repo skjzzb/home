@@ -4,6 +4,7 @@ import { HomeComponent } from './views/home/home.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { FaqComponent } from './views/faq/faq.component';
 import { ErrorComponent } from './views/error/error.component';
+import { ProfileComponent } from './views/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   },{
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent
   },
   {
     path: 'faq',

@@ -13,7 +13,15 @@
           <li class="current"><a [routerLink]="[ '/']">Home</a></li>
           <li><a [routerLink]="['/faq']">FAQ</a></li>
           <li><a [routerLink]="['/contact']">Contact us</a></li>
-          <li><a data-toggle="modal" data-target="#exampleModal">Login/Register</a></li>
+         
+          <ng-container *ngIf="!authService.customerData; else elseTemplate">
+            <li><a data-toggle="modal" data-target="#exampleModal">Login/Register</a></li>   
+          </ng-container>
+          <ng-template #elseTemplate>
+            <li><a [routerLink] = "['profile']">Profile</a></li>
+            <li><a [routerLink] = "['profile']">My Orders</a></li>
+            <li><a (click)="authService.signout()">Logout</a></li>
+          </ng-template>
       </ul>
   </div>
 </nav>
