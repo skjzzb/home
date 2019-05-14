@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Customer } from '../models/Customer.model';
 import { Router } from '@angular/router';
 import { auth } from 'firebase';
+import { closeWindow } from '../../assets/js/closeModal'
 
 @Injectable({
   providedIn: 'root'
@@ -81,6 +82,7 @@ export class AuthService {
   authLogin(provider){
     return this.afAuth.auth.signInWithPopup(provider).then((result) => {
       this.ngZone.run(() => {
+        closeWindow()
         this.router.navigate(['profile'])
       })
       this.updateUserData(result.user)
