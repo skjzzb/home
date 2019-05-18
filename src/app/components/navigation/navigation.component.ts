@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/shared/auth.service';
 import { OrdersService } from 'src/app/shared/orders.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-navigation',
@@ -10,11 +11,13 @@ import { OrdersService } from 'src/app/shared/orders.service';
 export class NavigationComponent implements OnInit {
 
   orderCount:number;
-  constructor(public authService: AuthService, public orderService: OrdersService) { }
+  constructor(public authService: AuthService, public orderService: OrdersService, private spinner:NgxSpinnerService) { }
 
   ngOnInit() {
+    this.spinner.show();
     this.orderService.getNumberOfTempOrders().subscribe((Data) => {
       this.orderCount = Data
+      this.spinner.hide();
     });
   }
 
