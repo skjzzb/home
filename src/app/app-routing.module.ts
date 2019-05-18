@@ -7,6 +7,7 @@ import { ErrorComponent } from './views/error/error.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
 import { PackagesComponent } from './views/packages/packages.component';
+import { CartComponent } from './views/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,8 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  },{
+  },
+  {
     path: 'contact',
     component: ContactComponent
   },
@@ -33,6 +35,11 @@ const routes: Routes = [
   {
     path: 'packages',
     component: PackagesComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'cart',
+    component: CartComponent,
     canActivate: [AuthGuard]
   },
   {

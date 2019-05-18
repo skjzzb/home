@@ -19,6 +19,7 @@ import { AuthComponent } from './components/auth/auth.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { PackagesComponent } from './views/packages/packages.component';
 import { AuthGuard } from './guards/auth.guard';
+import { CartComponent } from './views/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AuthGuard } from './guards/auth.guard';
     FaqComponent,
     AuthComponent,
     ProfileComponent,
-    PackagesComponent
+    PackagesComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

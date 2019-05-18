@@ -28,6 +28,10 @@ export class OrdersService {
           ...c.payload.val()
         })).length
       }));
-    
+  }
+
+  public removeTempOrder(orderId){
+    const user = JSON.parse(localStorage.getItem('user'));
+    return this.firebase.object('tempOrders/'+user.uid+"/"+orderId).remove();
   }
 }
