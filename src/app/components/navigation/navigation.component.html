@@ -22,6 +22,7 @@
             <li [routerLinkActive]="'current'"><a [routerLink] = "['profile']">My Orders</a></li>
             <li [routerLinkActive]="'current'"><a (click)="authService.signout()">Logout</a></li>
           </ng-template>
+          <li [routerLinkActive]="'current'"><a [routerLink]="['/cart']">My cart(1)</a></li>
       </ul>
   </div>
 </nav>

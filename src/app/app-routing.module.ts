@@ -6,6 +6,7 @@ import { FaqComponent } from './views/faq/faq.component';
 import { ErrorComponent } from './views/error/error.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
+import { PackagesComponent } from './views/packages/packages.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,11 @@ const routes: Routes = [
   {
     path: 'faq',
     component: FaqComponent
+  },
+  {
+    path: 'packages',
+    component: PackagesComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '404',

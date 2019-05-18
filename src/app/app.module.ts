@@ -17,6 +17,8 @@ import { ErrorComponent } from './views/error/error.component';
 import { FaqComponent } from './views/faq/faq.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { ProfileComponent } from './views/profile/profile.component';
+import { PackagesComponent } from './views/packages/packages.component';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { ProfileComponent } from './views/profile/profile.component';
     ErrorComponent,
     FaqComponent,
     AuthComponent,
-    ProfileComponent
+    ProfileComponent,
+    PackagesComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,7 @@ import { ProfileComponent } from './views/profile/profile.component';
     AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

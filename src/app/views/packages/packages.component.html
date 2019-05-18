@@ -1,0 +1,38 @@
+<section class="page-title" style="background-image:url(assets/images/background/4.jpg)">
+  <div class="auto-container">
+      <h1>Portfolio</h1>
+        <ul class="bread-crumb clearfix">
+            <li><a href="index.html">Home</a></li>
+            <li class="active">Portfolio</li>
+        </ul>
+    </div>
+</section>
+<!--End Page Title-->
+
+<section class="gallery-section">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Gallery Item-->
+      <div *ngFor="let packg of packages" class="gallery-item col-md-4 col-sm-6 col-xs-12">
+          <div class="inner-box">
+              <figure class="image-box">
+                  <img src={{packg.clothImage}} alt="">
+                  <!--Overlay Box-->
+                  <div class="overlay-box">
+                      <div class="overlay-inner">
+                          <div class="content">
+                              <div class="col-sm-6 col-sm-offset-3">
+                                <input type="text" class="form-control center" name="weight" style="color:black;" placeholder="Weight(approximate)" [(ngModel)]="weight">
+                              </div><br><br>
+                              <p>{{packg.clothName}}</p>
+                              <p>RS {{packg.clothPrice}} /Kg</p>
+                              <a data-toggle="modal" (click)="addToCart(packg)" data-target="#addOrder" class="link"><span class="icon flaticon-add"></span></a>
+                          </div>
+                      </div>
+                  </div>
+              </figure>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
