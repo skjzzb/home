@@ -12,9 +12,7 @@ import { closeWindow } from '../../assets/js/closeModal'
 })
 export class AuthService {
 
-  customerData: any;
-  currentCustomer: Observable<Customer>;
-  customer:Customer;
+  public customerData: any;
   public loginError: string;
   public signupError: string;
 
@@ -121,6 +119,11 @@ export class AuthService {
       localStorage.removeItem('user');
       this.router.navigate(['home'])
     })
+  }
+
+  get isLoggedIn(): boolean{
+    const user = JSON.parse(localStorage.getItem('user'));
+    return(user!==null && user.emailVerified!==false)? true:false;
   }
 
 }

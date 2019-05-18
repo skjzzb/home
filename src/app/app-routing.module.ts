@@ -5,8 +5,14 @@ import { ContactComponent } from './views/contact/contact.component';
 import { FaqComponent } from './views/faq/faq.component';
 import { ErrorComponent } from './views/error/error.component';
 import { ProfileComponent } from './views/profile/profile.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
   {
     path: 'home',
     component: HomeComponent
@@ -16,7 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'faq',
