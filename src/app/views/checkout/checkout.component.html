@@ -1,0 +1,26 @@
+<div class="main">
+<div class="container">
+  <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
+      <fieldset>
+          <div class="fieldset-flex">
+              <figure>
+                  <img src="assets/images/signup-img-3.png" alt="">
+              </figure>
+              <div class="fieldset-content" style="margin-bottom: 50px; margin-top: 50px;">
+                  <label class="form-label">Enter your information manually below</label>
+                  <div class="form-group">
+                    <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)" placeholder="Enter Pickup Location"/>
+                  </div>
+                  <div class="form-group">
+                    <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)" placeholder="Enter Dropoff Location"/>
+                  </div>
+                  <div class="form-group">
+                      <input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" id="email" placeholder="Pickup Date" />
+                  </div>
+                  <owl-date-time #dt1></owl-date-time>
+              </div>
+          </div>
+      </fieldset>
+  </form>
+</div>
+</div>

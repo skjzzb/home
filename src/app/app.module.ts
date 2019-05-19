@@ -6,6 +6,10 @@ import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/da
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { AgmCoreModule } from '@agm/core';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +25,7 @@ import { ProfileComponent } from './views/profile/profile.component';
 import { PackagesComponent } from './views/packages/packages.component';
 import { AuthGuard } from './guards/auth.guard';
 import { CartComponent } from './views/cart/cart.component';
+import { CheckoutComponent } from './views/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,8 @@ import { CartComponent } from './views/cart/cart.component';
     AuthComponent,
     ProfileComponent,
     PackagesComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,15 @@ import { CartComponent } from './views/cart/cart.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAhgYGsUa7529jFR8yWrnTLjgvyA3T9Xi0'
+    }),
+    GooglePlaceModule,
+    BrowserModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
+    BrowserAnimationsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
