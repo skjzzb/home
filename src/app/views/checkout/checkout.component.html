@@ -9,14 +9,18 @@
               <div class="fieldset-content" style="margin-bottom: 50px; margin-top: 50px;">
                   <label class="form-label">Enter your information manually below</label>
                   <div class="form-group">
-                    <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)" placeholder="Enter Pickup Location"/>
+                    <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handlePickupChange($event)" placeholder="Enter Pickup Location"/>
                   </div>
                   <div class="form-group">
-                    <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)" placeholder="Enter Dropoff Location"/>
+                    <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleDropoffChange($event)" placeholder="Enter Dropoff Location"/>
                   </div>
                   <div class="form-group">
-                      <input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" id="email" placeholder="Pickup Date" />
+                      <input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" id="email" placeholder="Pickup Date" name="pickupDate" #pickupDate/>
                   </div>
+                  <div class="form-group">
+                      <button (click)="proceedOrder(pickupDate.value)" class="btn btn-primary">Save</button>
+                  </div>
+                  
                   <owl-date-time #dt1></owl-date-time>
               </div>
           </div>
