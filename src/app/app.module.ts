@@ -10,6 +10,7 @@ import { AgmCoreModule } from '@agm/core';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { OwlDateTimeModule, OwlNativeDateTimeModule, OWL_DATE_TIME_FORMATS } from 'ng-pick-datetime';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { PackagesComponent } from './views/packages/packages.component';
 import { AuthGuard } from './guards/auth.guard';
 import { CartComponent } from './views/cart/cart.component';
 import { CheckoutComponent } from './views/checkout/checkout.component';
+import { OrdersComponent } from './views/orders/orders.component';
 
 export const MY_NATIVE_FORMATS = {
   fullPickerInput: {year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric'},
@@ -50,7 +52,8 @@ export const MY_NATIVE_FORMATS = {
     ProfileComponent,
     PackagesComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,8 @@ export const MY_NATIVE_FORMATS = {
     BrowserModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [AuthGuard, {provide: OWL_DATE_TIME_FORMATS, useValue: MY_NATIVE_FORMATS}],
   bootstrap: [AppComponent]

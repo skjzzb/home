@@ -19,7 +19,7 @@
           </ng-container>
           <ng-template #elseTemplate>
             <li [routerLinkActive]="'current'"><a [routerLink] = "['profile']">Profile</a></li>
-            <li [routerLinkActive]="'current'"><a [routerLink] = "['profile']">My Orders</a></li>
+            <li [routerLinkActive]="'current'"><a [routerLink] = "['orders']">My Orders</a></li>
             <li [routerLinkActive]="'current'"><a (click)="authService.signout()">Logout</a></li>
           </ng-template>
           <li [routerLinkActive]="'current'"><a [routerLink]="['/cart']">My cart({{orderCount}})</a></li>

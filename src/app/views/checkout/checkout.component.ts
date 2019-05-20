@@ -71,7 +71,7 @@ export class CheckoutComponent implements OnInit {
     }
 
     this.orderService.saveOrder(customeReq, this.tempOrders);
-    
+
   }
 
   getTodayDate(){

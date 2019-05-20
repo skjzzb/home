@@ -32,7 +32,8 @@
               "src/assets/css/responsive.css",
               "src/assets/css/color-switcher-design.css",
               "src/assets/css/color-themes/default-theme.css",
-              "node_modules/ng-pick-datetime/assets/style/picker.min.css"
+              "node_modules/ng-pick-datetime/assets/style/picker.min.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "src/assets/js/jquery.js",

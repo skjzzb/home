@@ -4,6 +4,8 @@ import { OrderData } from '../models/Order.model';
 import { Observable } from 'rxjs';
 import {map} from 'rxjs/operators'
 import { CustomerRequest } from '../models/CustomerRequest.model';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +13,10 @@ import { CustomerRequest } from '../models/CustomerRequest.model';
 export class OrdersService {
 
   tempOrders: AngularFireList<OrderData>;
+  orders: AngularFireList<CustomerRequest>
   countTempOrders: Observable<OrderData[]>;
   count: Observable<number>;
-  constructor(private firebase: AngularFireDatabase) { }
+  constructor(private firebase: AngularFireDatabase, private toastr: ToastrService, private router: Router) { }
 
   getTempOrders(){
     const user = JSON.parse(localStorage.getItem('user'));
@@ -53,9 +56,17 @@ export class OrdersService {
       count++
     })
     this.firebase.object('tempOrders/'+user.uid).remove()
+    this.showSuccess()
+    this.router.navigate(['orders']);
   }
 
-  public updateOrderData(key: string, order: OrderData){
+  showSuccess(){
+    this.toastr.success('Check my Order for more details', 'OrderPlaced');
+  }
+
+  getOrders(){
     const user = JSON.parse(localStorage.getItem('user'));
+    this.orders = this.firebase.list('CustomerRequests/'+user.uid);
+    return this.orders.snapshotChanges();
   }
 }

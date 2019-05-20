@@ -1,0 +1,39 @@
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+        <h1>My Orders</h1>
+        <div class="table">
+
+          <div class="row header">
+            <div class="cell">
+              Pickup Date/ Time
+            </div>
+            <div class="cell">
+              Totoal Price
+            </div>
+            <div class="cell">
+              Totoal Weight
+            </div>
+            <div class="cell">
+              Status
+            </div>
+          </div>
+
+          <div class="row" *ngFor="let order of orders">
+            <div class="cell" data-title="Full Name">
+              {{order.pickupDate + ' ' + order.pickupTime}}
+            </div>
+            <div class="cell" data-title="Age">
+              RS {{order.totalPrice}} /=
+            </div>
+            <div class="cell" data-title="Job Title">
+              {{order.totalWeight}} Kg
+            </div>
+            <div class="cell" data-title="Location">
+              {{order.status}}
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
