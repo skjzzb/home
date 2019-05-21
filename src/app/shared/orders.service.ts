@@ -72,6 +72,6 @@ export class OrdersService {
 
   getOrder(id: string){
     const user = JSON.parse(localStorage.getItem('user'));
-    return this.firebase.object('CustomerRequests/'+user.uid+'/'+id).snapshotChanges();
+    return this.firebase.object<CustomerRequest>('CustomerRequests/'+user.uid+'/'+id).snapshotChanges();
   }
 }
