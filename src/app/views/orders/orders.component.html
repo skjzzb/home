@@ -19,7 +19,7 @@
             </div>
           </div>
 
-          <div class="row" *ngFor="let order of orders">
+          <div class="row" *ngFor="let order of orders" [routerLink]="[ '/orders', order.$key ]">
             <div class="cell" data-title="Full Name">
               {{order.pickupDate + ' ' + order.pickupTime}}
             </div>

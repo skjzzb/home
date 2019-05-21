@@ -28,6 +28,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { CartComponent } from './views/cart/cart.component';
 import { CheckoutComponent } from './views/checkout/checkout.component';
 import { OrdersComponent } from './views/orders/orders.component';
+import { OrderComponent } from './views/order/order.component';
 
 export const MY_NATIVE_FORMATS = {
   fullPickerInput: {year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric'},
@@ -53,7 +54,8 @@ export const MY_NATIVE_FORMATS = {
     PackagesComponent,
     CartComponent,
     CheckoutComponent,
-    OrdersComponent
+    OrdersComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
