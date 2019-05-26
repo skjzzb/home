@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/shared/auth.service';
+import { AuthService } from '../../shared/auth.service';
 import { closeWindow } from '../../../assets/js/closeModal.js'
 
 @Component({
@@ -15,7 +15,7 @@ export class AuthComponent implements OnInit {
   hasLoginError: boolean;
   hasSignupError: boolean;
 
-  constructor(private authService: AuthService) { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
   }
