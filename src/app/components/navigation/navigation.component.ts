@@ -15,10 +15,14 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
     this.spinner.show();
-    this.orderService.getNumberOfTempOrders().subscribe((Data) => {
-      this.orderCount = Data
-      this.spinner.hide();
-    });
+    var user = JSON.parse(localStorage.getItem('user'))
+    if(user){
+      this.orderService.getNumberOfTempOrders().subscribe((Data) => {
+        this.orderCount = Data
+        this.spinner.hide();
+      });
+    }
+    this.spinner.hide();
   }
 
 }
