@@ -3,6 +3,7 @@ import {CustomerRequest} from '../../models/CustomerRequest.model'
 import { OrdersService } from 'src/app/shared/orders.service';
 import { OrderData } from 'src/app/models/Order.model';
 import { Router } from '@angular/router';
+import { FirefunctionsService } from 'src/app/shared/firefunctions.service';
 
 @Component({
   selector: 'app-checkout',
@@ -22,7 +23,7 @@ export class CheckoutComponent implements OnInit {
   weight: number =0;
   pickupDate: string;
 
-  constructor(private orderService: OrdersService, private router: Router) { }
+  constructor(private orderService: OrdersService, private router: Router, private fbFunction: FirefunctionsService) { }
 
   ngOnInit() { 
     this.orderService.getTempOrders().subscribe((Data) => {
@@ -36,6 +37,9 @@ export class CheckoutComponent implements OnInit {
         this.router.navigate(['packages'])
       }
       this.calTotal();
+    })
+    this.fbFunction.getDate().subscribe((Data) => {
+      console.log(Data)
     })
   }
 
