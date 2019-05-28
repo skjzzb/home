@@ -11,7 +11,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class PackagesComponent implements OnInit {
 
   packages: PackageData[];
-  weight: number
+  weight: number = 0;
   constructor(private packageService: PackagesService, private spinner:NgxSpinnerService) { }
 
   ngOnInit() {
@@ -28,8 +28,10 @@ export class PackagesComponent implements OnInit {
   }
 
   addToCart(packagedata){
-    this.packageService.addToCart(packagedata, this.weight);
-    this.weight = 0;
+    if(this.weight!=0){
+      this.packageService.addToCart(packagedata, this.weight);
+      this.weight = 0;
+    }
   }
 
 }
