@@ -92,8 +92,9 @@ export class CheckoutComponent implements OnInit {
     this.total = 0;
     this.weight = 0;
     this.tempOrders.forEach((element) => {
-      this.total+=element.price
-      this.weight+=element.weight
+      this.total +=element.price
+      this.weight += parseFloat(element.weight.toString())
+      // console.log(this.weight+" "+element.weight)
     })
   }
 
