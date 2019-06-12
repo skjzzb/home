@@ -7,7 +7,7 @@ export interface CustomerRequest{
     dropOffLocation: string;
     order: OrderData[];
     pickupLocation: string;
-    status: string;
+    status: number;
     time: string;
     totalPrice: number;
     totalWeight: number;

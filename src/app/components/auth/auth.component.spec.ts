@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 import { AuthComponent } from './auth.component';
 
@@ -8,7 +10,11 @@ describe('AuthComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AuthComponent ]
+      declarations: [ AuthComponent ],
+      imports: [FormsModule, ReactiveFormsModule],
+      providers: [
+        AngularFireAuth
+      ]
     })
     .compileComponents();
   }));

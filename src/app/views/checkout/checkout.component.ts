@@ -66,7 +66,7 @@ export class CheckoutComponent implements OnInit {
       dropOffLocation: this.dropoffLocation,
       order: null,
       pickupLocation: this.pickupLocation,
-      status: "Requesting",
+      status: 1,
       time: time,
       totalPrice: this.total,
       totalWeight: this.weight,

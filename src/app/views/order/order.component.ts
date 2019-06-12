@@ -35,21 +35,21 @@ export class OrderComponent implements OnInit {
   }
 
   setStyle(){
-    if(this.currentOrder.status == "Pickedup"){
+    if(this.currentOrder.status == 1){
       this.styles[0] = this.finsihed;
-    }else if(this.currentOrder.status == "Onqueue"){
+    }else if(this.currentOrder.status == 2){
       this.styles[0] = this.finsihed;
       this.styles[1] = this.finsihed;
-    }else if(this.currentOrder.status == "Cleaning"){
+    }else if(this.currentOrder.status == 3){
       this.styles[0] = this.finsihed;
       this.styles[1] = this.finsihed;
       this.styles[2] = this.finsihed;
-    }else if(this.currentOrder.status == "Cleaned" || this.currentOrder.status == "Delivering"){
+    }else if(this.currentOrder.status == 4 || this.currentOrder.status == 5){
       this.styles[0] = this.finsihed;
       this.styles[1] = this.finsihed;
       this.styles[2] = this.finsihed;
       this.styles[3] = this.finsihed;
-    }else if(this.currentOrder.status == "Finished"){
+    }else if(this.currentOrder.status == 6){
       this.styles[0] = this.finsihed;
       this.styles[1] = this.finsihed;
       this.styles[2] = this.finsihed;
