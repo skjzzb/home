@@ -75,4 +75,15 @@ export class OrdersService {
     const user = JSON.parse(localStorage.getItem('user'));
     return this.firebase.object<CustomerRequest>('CustomerRequests/'+user.uid+'/'+id).snapshotChanges();
   }
+
+  public statusToText(status){
+    switch(status){
+      case 1: return "Requesting"
+      case 2: return "Sending to Laundry"
+      case 3: return "Delivered To Laundry"
+      case 4: return "Washing"
+      case 5: return "Delivering"
+      case 6: return "Finished"
+    }
+  }
 }

@@ -11,7 +11,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class OrdersComponent implements OnInit {
 
   orders: CustomerRequest[];
-  constructor(private orderService: OrdersService,  private spinner:NgxSpinnerService) { }
+  constructor(public orderService: OrdersService,  private spinner:NgxSpinnerService) { }
 
   ngOnInit() {
     this.spinner.show()

@@ -21,7 +21,7 @@ export class OrderComponent implements OnInit {
   styles:[{},{},{},{},{}];
   orderId: string;
   currentOrder:CustomerRequest;
-  constructor(private orderService: OrdersService, private acRoute: ActivatedRoute) { }
+  constructor(public orderService: OrdersService, private acRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.acRoute.params.subscribe(params => {

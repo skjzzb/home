@@ -12,7 +12,7 @@
               Totoal Price
             </div>
             <div class="cell">
-              Totoal Weight
+              Pieces
             </div>
             <div class="cell">
               Status
@@ -21,16 +21,16 @@
 
           <div class="row" *ngFor="let order of orders" [routerLink]="[ '/orders', order.$key ]">
             <div class="cell" data-title="Full Name">
-              {{order.pickupDate + ' ' + order.pickupTime}}
+              {{order.scheduledDate}}
             </div>
             <div class="cell" data-title="Age">
               RS {{order.totalPrice}} /=
             </div>
             <div class="cell" data-title="Job Title">
-              {{order.totalWeight}} Kg
+              {{order.totalItems}}
             </div>
             <div class="cell" data-title="Location">
-              {{order.status}}
+              {{orderService.statusToText(order.status)}}
             </div>
           </div>
         </div>

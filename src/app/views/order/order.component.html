@@ -2,15 +2,15 @@
 	<div class="content1">
 		<h2>Order Tracking: {{orderId}}</h2>
 	</div>
-	<div class="content2">
-		<div class="content2-header1">
+	<div class="row content2">
+		<div class="col content2-header1">
 			<p>Pickup up Via : <span>Threewheeler</span></p>
 		</div>
-		<div class="content2-header1">
-			<p>Status : <span>{{currentOrder?.status}}</span></p>
+		<div class="col content2-header1">
+			<p>Status : <span>{{orderService.statusToText(currentOrder?.status)}}</span></p>
 		</div>
-		<div class="content2-header1">
-			<p>Expected Date : <span>{{currentOrder?.date}}</span></p>
+		<div class="col content2-header1">
+			<p>Expected Date : <span>{{currentOrder?.scheduledDate}}</span></p>
 		</div>
 		<div class="clear"></div>
 	</div>
