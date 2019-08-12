@@ -20,7 +20,7 @@ export class CheckoutComponent implements OnInit {
   dropoffLocation = "";
   tempOrders: OrderData [];
   total: number = 0;
-  weight: number =0;
+  pieces: number =0;
   pickupDate: string;
 
   constructor(private orderService: OrdersService, private router: Router, private fbFunction: FirefunctionsService) { }
@@ -69,7 +69,7 @@ export class CheckoutComponent implements OnInit {
       status: 1,
       time: time,
       totalPrice: this.total,
-      totalWeight: this.weight,
+      totalPieces: this.pieces,
       pickupDate: pDate,
       pickupTime: pTime,
     }
@@ -94,10 +94,10 @@ export class CheckoutComponent implements OnInit {
 
   calTotal(){
     this.total = 0;
-    this.weight = 0;
+    this.pieces = 0;
     this.tempOrders.forEach((element) => {
       this.total +=element.price
-      this.weight += parseFloat(element.weight.toString())
+      this.pieces += parseFloat(element.pieces.toString())
       // console.log(this.weight+" "+element.weight)
     })
   }

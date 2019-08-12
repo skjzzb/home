@@ -10,7 +10,7 @@ export interface CustomerRequest{
     status: number;
     time: string;
     totalPrice: number;
-    totalWeight: number;
+    totalPieces: number;
     pickupDate: string;
     pickupTime: string;
 }

@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
   constructor(public authService: AuthService) { }
 
   ngOnInit() {
-    this.customer = this.authService.customerData
+    this.customer = JSON.parse(localStorage.getItem('user'))
     console.log(this.customer)
   }
 

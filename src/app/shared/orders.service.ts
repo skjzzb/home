@@ -50,7 +50,7 @@ export class OrdersService {
         clothId: element.clothId,
         clothName: element.clothName,
         price: element.price,
-        weight: element.weight
+        pieces: element.pieces
       }
       this.firebase.object('CustomerRequests/'+user.uid+'/'+timestamp+'/order/'+count).set(tempOrder);
       count++

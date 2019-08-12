@@ -6,7 +6,7 @@ import { Customer } from '../models/Customer.model';
 import { Router } from '@angular/router';
 import { auth } from 'firebase';
 import { closeWindow } from '../../assets/js/closeModal'
-
+ 
 @Injectable({
   providedIn: 'root'
 })

@@ -16,10 +16,9 @@
                 </div>
             </div>
             <div *ngIf="authService.customerData" class="col-md-6 col-sm-12 col-xs-12">
-              <p>Name: {{authService.customerData?.name}}</p>
-              <p>Email:</p>
-              <p>AvatarUrl:</p>
-              <p>Phone:</p>
+              <p>Name: {{customer.displayName}}</p>
+              <p>Email: {{customer.email}}</p>
+              <p>Phone: </p>
           </div>
         </div>
     </div>
