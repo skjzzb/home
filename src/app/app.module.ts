@@ -30,6 +30,7 @@ import { CartComponent } from './views/cart/cart.component';
 import { CheckoutComponent } from './views/checkout/checkout.component';
 import { OrdersComponent } from './views/orders/orders.component';
 import { OrderComponent } from './views/order/order.component';
+import { ClothsComponent } from './views/packages/cloths/cloths.component';
 
 export const MY_NATIVE_FORMATS = {
   fullPickerInput: {year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric'},
@@ -56,7 +57,8 @@ export const MY_NATIVE_FORMATS = {
     CartComponent,
     CheckoutComponent,
     OrdersComponent,
-    OrderComponent
+    OrderComponent,
+    ClothsComponent
   ],
   imports: [
     BrowserModule,

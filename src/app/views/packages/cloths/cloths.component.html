@@ -1,0 +1,25 @@
+<div class="auto-container">
+    <div class="row clearfix">
+      <!--Gallery Item-->
+      <div *ngFor="let cloth of clothes" class="gallery-item col-md-4 col-sm-6 col-xs-12">
+        <div class="inner-box">
+          <figure class="image-box">
+            <img src={{cloth.clothImage}} alt="">
+            <!--Overlay Box-->
+            <div class="overlay-box">
+                <div class="overlay-inner">
+                  <div class="content">
+                    <div class="col-sm-6 col-sm-offset-3">
+                      <input type="text" class="form-control center" name="weight" style="color:black;" placeholder="Pieces" [(ngModel)]="pieces">
+                    </div><br><br>
+                    <p>{{cloth.clothName}}</p>
+                    <p>RS {{cloth.clothPrice}} / piece</p>
+                    <a data-toggle="modal" (click)="addToCart(cloth)" data-target="#addOrder" class="link"><span class="icon flaticon-add"></span></a>
+                  </div>
+                </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>

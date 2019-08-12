@@ -1,4 +1,4 @@
-export interface PackageData{
+export interface Cloth{
     clothId: string,
     clothImage: string,
     clothName: string,
