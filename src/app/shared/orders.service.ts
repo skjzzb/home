@@ -42,6 +42,7 @@ export class OrdersService {
   public saveOrder(order: CustomerRequest, tempOrderData: OrderData[]){
     var timestamp = new Date().getTime();
     const user = JSON.parse(localStorage.getItem('user'));
+    order.currentTime = timestamp.toString();
     // console.log(user.uid +'>' +timestamp)
     this.firebase.object('CustomerRequests/'+user.uid+'/'+timestamp).set(order);
     var count = 0

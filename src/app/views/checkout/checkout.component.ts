@@ -60,18 +60,18 @@ export class CheckoutComponent implements OnInit {
     // console.log(pDate+'>'+pTime)
 
     var customeReq: CustomerRequest = {
+      currentTime: '',
       customerEmail: user.email,
-      date: today,
+      orderPlacedDate: today,
       driverEmail: "",
       dropOffLocation: this.dropoffLocation,
       order: null,
       pickupLocation: this.pickupLocation,
       status: 1,
-      time: time,
+      orderPlacedTime: time,
       totalPrice: this.total,
-      totalPieces: this.pieces,
-      pickupDate: pDate,
-      pickupTime: pTime,
+      totalItems: this.pieces,
+      scheduledDate: pDate,
     }
 
     this.orderService.saveOrder(customeReq, this.tempOrders);

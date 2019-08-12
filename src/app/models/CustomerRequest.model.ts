@@ -1,16 +1,16 @@
 import { OrderData } from './Order.model';
 
 export interface CustomerRequest{
+    currentTime: string;
     customerEmail: string;
-    date: string;
+    orderPlacedDate: string;
     driverEmail: string;
     dropOffLocation: string;
     order: OrderData[];
     pickupLocation: string;
     status: number;
-    time: string;
+    orderPlacedTime: string;
     totalPrice: number;
-    totalPieces: number;
-    pickupDate: string;
-    pickupTime: string;
+    totalItems: number;
+    scheduledDate: string;
 }
