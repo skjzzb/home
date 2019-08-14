@@ -10,7 +10,7 @@ export interface CustomerRequest{
     pickupLocation: string;
     status: number;
     orderPlacedTime: string;
-    totalPrice: number;
-    totalItems: number;
+    totalPrice: string;
+    totalItems: string;
     scheduledDate: string;
 }

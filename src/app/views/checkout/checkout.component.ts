@@ -69,8 +69,8 @@ export class CheckoutComponent implements OnInit {
       pickupLocation: this.pickupLocation,
       status: 1,
       orderPlacedTime: time,
-      totalPrice: this.total,
-      totalItems: this.pieces,
+      totalPrice: this.total.toString(),
+      totalItems: this.pieces.toString(),
       scheduledDate: pDate,
     }
 
