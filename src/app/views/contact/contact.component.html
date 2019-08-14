@@ -24,7 +24,7 @@
                             <span class="icon flaticon-location-pin"></span>
                         </div>
                         <h3>Our Address</h3>
-                        <div class="text">60 Grant Ave. Central New <br> Road 0708, UK</div>
+                        <div class="text">Kandana, <br> Sri Lanka</div>
                     </div>
                 </div>
                 
@@ -35,7 +35,7 @@
                             <span class="icon flaticon-arroba-2"></span>
                         </div>
                         <h3>Phone & Email</h3>
-                        <div class="text">(+880) 1723801729 & 224 567 <br> dryco@gmail.com</div>
+                        <div class="text">0768619791<br> sasith@gmail.com</div>
                     </div>
                 </div>
                 
@@ -65,24 +65,24 @@
             	<h2>Write Us Message</h2>
                 <!--Contact Form-->
                 <div class="contact-form">
-                    <form method="post" action="http://t.commonsupport.com/dryco/sendemail.php" id="contact-form">
+                    <form method="post" action="" id="contact-form">
                         <div class="row clearfix">
                             <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="fname" value="" placeholder="First Name *" required>
+                                <input type="text" name="fname" value="" [(ngModel)]="firstName" placeholder="First Name *" required>
                             </div>
                             <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="lname" value="" placeholder="Last Name *" required>
+                                <input type="text" name="lname" value="" [(ngModel)]="lastName" placeholder="Last Name *" required>
                             </div>
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                <input type="email" name="email" value="" placeholder="Email *" required>
+                                <input type="email" name="email" value="" [(ngModel)]="email" placeholder="Email *" required>
                             </div>
                             
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                <textarea name="message" placeholder="Message *"></textarea>
+                                <textarea name="message" placeholder="Message *" [(ngModel)]="message"></textarea>
                             </div>
                             
                             <div class="form-group col-md-12 col-sm-12 col-xs-12 text-left">
-                                <button type="submit" class="theme-btn btn-style-four">Send Message</button>
+                                <button class="theme-btn btn-style-four" (click)="sendMail()">Send Message</button>
                             </div>
                             
                         </div>

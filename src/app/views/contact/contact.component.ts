@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 require("../../../assets/js/map-script.js")
 
 @Component({
@@ -8,13 +9,27 @@ require("../../../assets/js/map-script.js")
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  firstName: string
+  lastName: string
+  email: string
+  message: string
+
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
   }
-  ngAfterViewInit(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-    // MapLoadScript()
+
+  sendMail(){
+    console.log('asdasdasdsadsada')
+    let quertyString = 'https://us-central1-picknwash-56236.cloudfunctions.net/sendMail?email='
+                        +this.email+'&message='+this.message+'&subject=message from pick and wash web&name='
+                        +this.firstName+' '+this.lastName
+    this.httpClient.get(quertyString).subscribe((response)=>{
+      alert(response["message"])
+    })
+    this.firstName = ''
+    this.lastName = ''
+    this.email = ''
+    this.message = ''
   }
 }
