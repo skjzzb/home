@@ -35,7 +35,7 @@ a,
 .work-block .inner-box:hover .icon-box,
 .team-member .inner-box .lower-box h3 a:hover,
 .team-member-two .inner-box .lower-box h3 a:hover{
-	color:#ff3548;
+	color:#2196f3;
 }
 
 /*Background Color*/
@@ -62,7 +62,7 @@ a,
 .main-header .sticky-header .main-menu .navigation > li:hover > a,
 .main-header .sticky-header .main-menu .navigation > li.current > a,
 .main-header .sticky-header .main-menu .navigation > li.current-menu-item > a{
-	background-color:#ff3548;
+	background-color:#2196f3;
 }
 
 /*Border Color*/
@@ -101,14 +101,14 @@ a,
 .comment-form .form-group textarea:focus,
 .comment-form button,
 .work-block .inner-box:hover .icon-box{
-	border-color:#ff3548;
+	border-color:#2196f3;
 }
 
 /*RGBA Color Light*/
 .fact-counter-section:before,
-.gallery-item .overlay-box{
+/* .gallery-item .overlay-box{
 	background-color:rgba(255,53,72,0.75);
-}
+} */
 
 /*RGBA Color Dark*/
 
@@ -134,7 +134,7 @@ a,
 	.main-menu .navbar-collapse > .navigation > li.current > a,
 	.main-menu .navbar-collapse > .navigation > li.current-menu-item > a,
 	.header-style-two.inner-header .main-menu .navigation > li > a{
-		background-color:#ff3548;
+		background-color:#2196f3;
 	}
 	
 }
