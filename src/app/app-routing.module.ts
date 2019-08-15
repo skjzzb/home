@@ -11,6 +11,7 @@ import { CartComponent } from './views/cart/cart.component';
 import { CheckoutComponent } from './views/checkout/checkout.component';
 import { OrdersComponent } from './views/orders/orders.component';
 import { OrderComponent } from './views/order/order.component';
+import { DriverComponent } from './views/driver/driver.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,10 @@ const routes: Routes = [
     path: 'orders',
     component: OrdersComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'drivers',
+    component: DriverComponent
   },
   {
     path: 'orders/:id',

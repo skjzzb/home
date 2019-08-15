@@ -1,0 +1,49 @@
+<section class="gallery-section" style="padding:0px 0px 150px">
+  <section class="section  border-bottom padding-top-20">
+          <div class="container">
+      
+              <div class="page-main-title text-center">
+                  <h2 class="heading text-gray">Register as a driver</h2>
+              </div>
+      
+      
+              <div id="filters" class="block-categories slick-initialized slick-slider">
+                <div aria-live="polite" class="slick-list draggable">
+                  <div class="slick-track" role="listbox" style="opacity: 1; width: 1092px; transform: translate3d(0px, 0px, 0px); margin-left: 260px">
+                    <form>
+                      <div class="row" style="margin-top: 50px">
+                        <div class="form-group col-md-2">
+                          <p>Email</p>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <input type="email" class="form-control" id="email" placeholder="Enter email address" #email>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-2">
+                            <p>Name</p>
+                          </div>
+                        <div class="form-group col-md-4">
+                          <input type="text" class="form-control" id="name" placeholder="Enter your name" #name>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-2">
+                            <p>Phone</p>
+                          </div>
+                        <div class="form-group col-md-4">
+                          <input type="phone" class="form-control" id="phone" placeholder="Enter phone" #phone>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                          <button class="btn btn-primary mb-2" (click)="save(name.value, email.value, phone.value)" style="float: right">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+  </section>
+</section>
