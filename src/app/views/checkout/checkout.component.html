@@ -1,5 +1,6 @@
-<div class="main">
+<div class="main" style="padding: 0px">
 <div class="container">
+    <h1 style="text-align: center">Enter your location Details</h1>
   <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
       <fieldset>
           <div class="fieldset-flex">
@@ -7,7 +8,7 @@
                   <img src="assets/images/signup-img-3.png" alt="">
               </figure>
               <div class="fieldset-content" style="margin-bottom: 50px; margin-top: 50px;">
-                  <label class="form-label">Enter your information manually below</label>
+                  <!-- <label class="form-label">Enter your information manually below</label> -->
                   <div class="form-group">
                     <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handlePickupChange($event)" placeholder="Enter Pickup Location"/>
                   </div>

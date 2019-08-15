@@ -19,6 +19,7 @@ export class NavigationComponent implements OnInit {
     if(user){
       this.orderService.getNumberOfTempOrders().subscribe((Data) => {
         this.orderCount = Data
+        // console.log(this.orderCount)
         this.spinner.hide();
       });
     }
